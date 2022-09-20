@@ -1,0 +1,27 @@
+.TextMessage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 30px;
+    padding: 30px;
+    background-color: rgb(46 110 178 / 40%);
+    height: 200px;
+    width: 80%;
+    margin: 50px auto;
+    z-index: 1;
+}
+
+.TextMessage_p {
+    color: #fff;
+    font-size: 35px;
+    margin: 0;
+}
+
+.TextMessage_p>span {
+    opacity: 0;
+}
+
+.TextMessage_p>span.revealed {
+    opacity: 1;
+}
