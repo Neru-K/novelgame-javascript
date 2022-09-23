@@ -4,23 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/Novel/style/novel.css" type="text/css" rel="stylesheet" />
-    <link
-      href="/Novel/style/text_message.css"
-      type="text/css"
-      rel="stylesheet"
-    />
+    <link href="/style/novel.css" type="text/css" rel="stylesheet" />
+    <link href="/style/text_message.css" type="text/css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
-    <div class="game-container">
-      <canvas class="background-layer" width="1920" height="1080"></canvas>
-      <canvas class="character-layer" width="1920" height="1080"></canvas>
+    <div id="game-container">
+      <canvas id="background-layer" width="1920" height="1080"></canvas>
+      <canvas id="character-layer" width="1920" height="1080"></canvas>
+      <div class="message_box">
+        <p class="text_message_p"></p>
+      </div>
     </div>
-    <script src="/Novel/NovelEvent.js"></script>
-    <script src="/Novel/NovelTextMessage.js"></script>
-    <script src="/KeyPressListener.js"></script>
-    <script src="/Novel/NovelRevealingText.js"></script>
-    <script src="/Novel/NovelMainLoop.js"></script>
+    <script src="/js/revealTextMessage.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
