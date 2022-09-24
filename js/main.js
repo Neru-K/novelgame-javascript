@@ -1,12 +1,12 @@
+//読み込み時に実行される関数
 (function () {
-  displayBGImage("/images/background/田舎の家の縁側（日中）.jpg");
-  displayCharaImage("/images/character/patient/josei_11_gray.png");
-  initRevealTextMessage(
-    "女性「サンプルテキストサンプル テキストサンプルテキスト」"
-  );
+  drawBGImage("/images/background/田舎の家の縁側（日中）.jpg");
+  drawCharaImage("/images/character/patient/josei_11_a.png");
+  initRevealTextMessage("女の子「いい縁側ですね 気に入りました」");
 })();
 
-function displayBGImage(src) {
+//背景の描画
+function drawBGImage(src) {
   const canvas = document.querySelector("#background-layer");
   const ctx = canvas.getContext("2d");
   const img = new Image();
@@ -17,7 +17,8 @@ function displayBGImage(src) {
   });
 }
 
-function displayCharaImage(src) {
+//キャラクターの描画
+function drawCharaImage(src) {
   const canvas = document.querySelector("#character-layer");
   const bgcanvas = document.querySelector("#background-layer");
   const ctx = canvas.getContext("2d");

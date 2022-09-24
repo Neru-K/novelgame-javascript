@@ -16,15 +16,15 @@ function initRevealTextMessage(text) {
 }
 
 function revealTextMessage(list) {
+  let timeout;
   const next = list.splice(0, 1)[0];
-  console.log(next);
   next.span.classList.add("revealed");
 
   if (list.length > 0) {
-    const timeout = setTimeout(() => {
+    timeout = setTimeout(() => {
       revealTextMessage(list);
     }, next.delayAfter);
   } else {
-    return true;
+    clearTimeout(timeout);
   }
 }
