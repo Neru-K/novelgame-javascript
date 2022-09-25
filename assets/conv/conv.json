@@ -1,0 +1,83 @@
+{
+  "common": {
+    "greeting": [
+      {
+        "phrase": "What's up?",
+        "time": 5,
+        "point": 1,
+        "when": "every"
+      },
+      {
+        "phrase": "How's your weekend?",
+        "time": 5,
+        "point": 1,
+        "when": "monday"
+      }
+    ]
+  },
+  "patient": {
+    "greeting2": [
+      {
+        "phrase": "Do you want something to drink by the way?"
+      }
+    ],
+    "hobby": [
+      {
+        "phrase": "What do you like doing in your free time?"
+      },
+      {
+        "phrase": "I enjoy cooking and baking but when the weather is nice, I also like to go outside for a walk or do some shopping in the city."
+      },
+      {
+        "phrase": "I would like to see that movie at the movie theater. But I'm sure I won't understand it. It's in Japanese."
+      },
+      {
+        "phrase": "Did you ever see the movie Grumpy Old Men?"
+      }
+      ,
+      {
+        "phrase": "It's a beautiful day. How do you feel?"
+      }
+    ],
+    "event1": [
+      {
+        "phrase": "What's up?"
+      }
+    ]
+  },
+  "friend": {
+    "greeting2": [
+      {
+        "phrase": "Hey! Do you want to hang out after school today? I was going to go see the new superhero movie."
+      }
+    ],
+    "hobby": [
+      {
+        "phrase": "What do you like doing in your free time?"
+      },
+      {
+        "phrase": "I enjoy cooking and baking but when the weather is nice, I also like to go outside for a walk or do some shopping in the city."
+      },
+      {
+        "phrase": "I would like to see that movie at the movie theater. But I'm sure I won't understand it. It's in Japanese."
+      },
+      {
+        "phrase": "Did you ever see the movie Grumpy Old Men?"
+      }
+      ,
+      {
+        "phrase": "It's a beautiful day. How do you feel?"
+      }
+    ],
+    "event1": [
+      {
+        "phrase": "What's up?"
+      }
+    ],
+    "at_classroom": [
+      {
+        "phrase": "Hi. Can I talk to you for a minute?"
+      }
+    ]
+  }
+}
