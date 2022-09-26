@@ -1,14 +1,23 @@
-keyboardListener();
-function keyboardListener() {
-  /* document.addEventListener("keypress", function (event) {
-    const name = event.key;
-    const code = event.code;
-    const metakye = event.metaKey;
-    alert(`Key pressed ${name} \r\n Key code value: ${code} ${metakye}`);
-  }); */
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "j" && (event.ctrlKey || event.metaKey)) {
-      alert("command+j");
+function singleKeyListener(element, key, callback) {
+  element.addEventListener("keydown", function (event) {
+    if (event.code === key) {
+      callback();
+    }
+  });
+}
+function multiKeyListener(element, key, mode, callback) {
+  let winkey, mackey;
+
+  element.addEventListener("keydown", function (event) {
+    if (mode == "ctrl") {
+      winkey = event.ctrlKey;
+      mackey = event.metaKey;
+    } else if (mode == "alt") {
+      winkey = event.altKey;
+      mackey = event.altKey;
+    }
+    if (event.code === key && (winkey || mackey)) {
+      callback();
     }
   });
 }
