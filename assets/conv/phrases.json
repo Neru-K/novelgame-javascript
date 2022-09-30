@@ -40,7 +40,7 @@
         "phrase": "Pardon me, I’m lost, how do I get to …?"
     },
     {
-        "phrase": "I’m looking for …"
+        "phrase": "I’m looking for I'm a box this big."
     },
     {
         "phrase": "Could you direct me to …?"
@@ -57,12 +57,8 @@
     {
         "phrase": "Excuse me, could you tell me how to get to the bus station?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Go up…"
     },
@@ -117,24 +113,12 @@
     {
         "phrase": "It’s next to…"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
+    
+    
+    
+    
     {
         "phrase": "My body says yes, but my heart say no."
     },
@@ -180,12 +164,8 @@
     {
         "phrase": "Apologies, but I can’t make it."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "You bring joy to my life."
     },
@@ -208,7 +188,7 @@
         "phrase": "I feel sad without you."
     },
     {
-        "phrase": "You inspire me."
+        "phrase": "You inspire me, and give me reason to believe."
     },
     {
         "phrase": "You are my reason for living."
@@ -234,12 +214,8 @@
     {
         "phrase": "I want a lifetime with you."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Do you have a reservation?"
     },
@@ -288,24 +264,12 @@
     {
         "phrase": "Do you need a wake-up call?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
+    
+    
+    
+    
     {
         "phrase": "For instance"
     },
@@ -381,12 +345,8 @@
     {
         "phrase": "Like"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Can you help me, please?"
     },
@@ -477,12 +437,8 @@
     {
         "phrase": "Can I go to the toilet?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Good to see you"
     },
@@ -543,12 +499,8 @@
     {
         "phrase": "Welcome"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Do you have a smaller size?"
     },
@@ -600,24 +552,12 @@
     {
         "phrase": "Where is the fitting room?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
+    
+    
+    
+    
     {
         "phrase": "You’ll do great."
     },
@@ -666,12 +606,8 @@
     {
         "phrase": "May the force be with you."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Much better!"
     },
@@ -729,12 +665,8 @@
     {
         "phrase": "Terrific!"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I see what you mean…"
     },
@@ -786,12 +718,8 @@
     {
         "phrase": "You are so right."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I shouldn’t have…"
     },
@@ -843,12 +771,8 @@
     {
         "phrase": "I do apologize for…"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Sleep with angels"
     },
@@ -891,12 +815,8 @@
     {
         "phrase": "Have sea dreams"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I respect you."
     },
@@ -966,15 +886,9 @@
     {
         "phrase": "You complete me."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
+    
     {
         "phrase": "now that"
     },
@@ -1038,12 +952,8 @@
     {
         "phrase": "in the interest of"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "That requires a bit more research first."
     },
@@ -1095,12 +1005,8 @@
     {
         "phrase": "I’II double check and let you know."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "That’s OK."
     },
@@ -1152,12 +1058,8 @@
     {
         "phrase": "There is no need. It’s ok."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Excuse me?"
     },
@@ -1188,12 +1090,8 @@
     {
         "phrase": "Let me repeat that just to make sure?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I’m hungry as a wolf!"
     },
@@ -1245,12 +1143,8 @@
     {
         "phrase": "I’m so hungry I could eat a scabby horse."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Good morning, sunshine!"
     },
@@ -1278,12 +1172,8 @@
     {
         "phrase": "Good morning, Sleeping beauty!"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I do apologize for…"
     },
@@ -1338,12 +1228,8 @@
     {
         "phrase": "I hope you’ll forgive me for…"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "No need to…"
     },
@@ -1398,24 +1284,12 @@
     {
         "phrase": "There is no need. It’s ok."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
+    
+    
+    
+    
     {
         "phrase": "Not possible."
     },
@@ -1459,7 +1333,7 @@
         "phrase": "I’d like to, but I know I’II regret it."
     },
     {
-        "phrase": "I really appreciate you asking me, bu t I can’t do it."
+        "phrase": "I really appreciate you asking me, but I can’t do it."
     },
     {
         "phrase": "I really appreciate you asking me but I can’t commit to that right now."
@@ -1506,12 +1380,8 @@
     {
         "phrase": "Sounds tempting, but I’II have to pass."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Adios"
     },
@@ -1566,12 +1436,8 @@
     {
         "phrase": "Be seeing you!"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Why not?"
     },
@@ -1624,17 +1490,13 @@
         "phrase": "Permission granted!"
     },
     {
-        "phrase": "Yes, what can I dofor you?"
+        "phrase": "Yes, what can I do for you?"
     },
     {
         "phrase": "Precisely!"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Have a fabulous birthday!"
     },
@@ -1683,12 +1545,8 @@
     {
         "phrase": "Hope you have an enjoyable birthday! You deserve it."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "What’s new?"
     },
@@ -1728,12 +1586,8 @@
     {
         "phrase": "How are you been?"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I’m not into it."
     },
@@ -1785,12 +1639,8 @@
     {
         "phrase": "I’m disinterested in that."
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Goodness gracious me!"
     },
@@ -1833,12 +1683,8 @@
     {
         "phrase": "Oh boy!"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "I’m weary"
     },
@@ -1893,12 +1739,8 @@
     {
         "phrase": "I’m running on empty"
     },
-    {
-        "phrase": ""
-    },
-    {
-        "phrase": ""
-    },
+    
+    
     {
         "phrase": "Namely"
     },

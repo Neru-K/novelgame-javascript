@@ -1,4 +1,4 @@
-const txt = `I am Japanese.
+I am Japanese.
 This is Japan.
 Is he Japanese?
 I am a Japanese.
@@ -1347,18 +1347,3 @@ I have Japanese and Chinese friends who speak to each other in English since tha
 Japan's gold and foreign exchange reserves stood at $68.9 billion at the end of 1998, down from $77.0 billion a year earlier.
 If a man wants to learn to sound like a native speaker of Japanese, he shouldn't only learn Japanese from women. The reverse is true for a woman.
 Five tremors in excess of magnitude 5.0 on the Richter scale have shaken Japan just this week, but scientists are warning that the largest expected aftershock has yet to hit.
-`;
-
-let json = txt.split("\n");
-// let transformed = json.map(function (element) {
-//   return { phrase: element };
-// });
-const transformed = json.flat();
-let mapped = transformed.map(function (v) {
-  return v.trim();
-});
-mapped.sort(function (a, b) {
-  return a.length - b.length;
-});
-
-console.log(mapped);

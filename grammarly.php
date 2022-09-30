@@ -46,15 +46,12 @@
       height: 230px;
       z-index: 10;
       font-family: "Noto Sans Mono", monospace;
+      font-size: 25px;
+      font-weight: 500;
     }
 
     [contenteditable]:focus-visible {
       outline: none;
-    }
-
-    [contenteditable] p {
-      font-size: 25px;
-      font-weight: 500;
     }
 
     .checkbutton {
@@ -126,13 +123,9 @@
 
     <grammarly-editor-plugin>
       <div class="grammarly-container">
-        <h2>The basics</h2>
-        <div contenteditable="true" onpaste="return false;" oncontextmenu="return false;">
+        <h2 class="conv-title"></h2>
+        <div class="input-window" contenteditable="true" onpaste="return false;" oncontextmenu="return false;">
           <p>
-            Mispellings and grammatical errors can effect your credibility.
-            The same goes for misused commas, and other types of punctuation .
-            Not only will Grammarly underline these issues in red, it will
-            also showed you how to correctly write the sentence.
           </p>
         </div>
         <div class="grammarly-bottom">
@@ -153,9 +146,10 @@
       <p class="text_message_p"></p>
     </div>
   </div>
+  <script src="/js/conversation.js"></script>
   <script src="/js/keyboardlistener.js"></script>
   <script src="/js/revealTextMessage.js"></script>
-  <script src="https://unpkg.com/@grammarly/editor-sdk?client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
+  <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
   <script>
     document
       .querySelectorAll("grammarly-editor-plugin")
@@ -171,9 +165,9 @@
     window.addEventListener("load", function() {
       const created = document.querySelector("grammarly-editor-plugin");
       const shadowroot = created.shadowRoot;
-      console.log(shadowroot);
-      console.log(shadowroot.querySelectorAll("div"));
       const k5 = shadowroot.querySelector(".k5xt8o2");
+      let is_visible = false;
+
       k5.style.visibility = "hidden";
 
       const checkbutton = document.querySelector('.checkbutton');
@@ -181,18 +175,26 @@
         k5.style.visibility = "visible";
       });
 
-      const div = document.querySelector("grammarly-editor-plugin > div");
+      const div = document.querySelector(".input-window");
+      const h2 = document.querySelector(".conv-title");
       multiKeyListener(div, "Enter", "ctrl", function() {
-        k5.style.visibility = "visible";
+        if (is_visible) {
+          div.innerHTML = "";
+          k5.style.visibility = "hidden";
+          is_visible = false;
+          talkRandomly(function(phrase) {
+            h2.innerHTML = '"' + phrase + '"';
+          });
+        } else {
+          k5.style.visibility = "visible";
+          is_visible = true;
+        }
+
       })
     });
   </script>
-  <script src="/js/conversation.js">
-    readConv();
-  </script>
+
   <script src="/js/main.js"></script>
 </body>
 
 </html>
-
-<!-- $client_id = $_ENV['CLIENT_ID']; -->
