@@ -1,5 +1,5 @@
-{
-"movies":[
+{"phrase":[
+[
     "I like movies.",
     "I love movies.",
     "I enjoy movies.",
@@ -677,7 +677,7 @@
     "I think it's unlikely that aliens similar to what we see in the movies have ever visited our planet.",
     "Jim's angry because his date for the movie stood him up and he wasted an hour waiting for her in the rain."
 ],
-"cat":[
+
     [
         "I love cats",
         "I had a cat.",
@@ -1633,9 +1633,9 @@
         "This time, however, the birds were starting to stir and make noise, and a neighbourhood cat was stalking one in the grass that was already making a grab for a worm or two.",
         "The first rex cat born in captivity, a cream male subsequently named Kallibunker, arrived with a retinue of four straight-hair littermates on July 21, 1950, in Bodmin Moor.",
         "Scientists injected some of these mice with GFD, and then injected cat allergen into the windpipes of all the mice, including a control group that was not allergic to cats."
-    ]
-],
-"japan":[
+    ],
+
+
     [
         "This is Japan.",
         "Is he Japanese?",

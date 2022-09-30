@@ -177,12 +177,13 @@
 
       const div = document.querySelector(".input-window");
       const h2 = document.querySelector(".conv-title");
+      let index = 0;
       multiKeyListener(div, "Enter", "ctrl", function() {
         if (is_visible) {
           div.innerHTML = "";
           k5.style.visibility = "hidden";
           is_visible = false;
-          talkRandomly(function(phrase) {
+          talkRandomly(function(phrase, index) {
             h2.innerHTML = '"' + phrase + '"';
           });
         } else {
