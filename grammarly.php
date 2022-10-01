@@ -151,6 +151,7 @@
   <script src="/js/revealTextMessage.js"></script>
   <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
   <script>
+    const talk = new TalkRandomly();
     document
       .querySelectorAll("grammarly-editor-plugin")
       .forEach((grammarlyEditor) => {
@@ -183,7 +184,7 @@
           div.innerHTML = "";
           k5.style.visibility = "hidden";
           is_visible = false;
-          talkRandomly(function(phrase, index) {
+          talk.talkRandomly((phrase) => {
             h2.innerHTML = '"' + phrase + '"';
           });
         } else {
