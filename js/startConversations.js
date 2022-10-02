@@ -18,64 +18,29 @@ class StartConversation {
       documentDomain: "casual",
     };
     this.container.classList.add("show");
-    this.k5.style.visibility = "hidden";
 
-    const checkbutton = document.querySelector(".checkbutton");
-    checkbutton.addEventListener("click", function (v) {
-      this.k5.style.visibility = "visible";
-    });
-
-    //キー操作
-    /* multiKeyListener(this.div, "Enter", "ctrl", function () {
-      if (this.is_visible) {
-        this.div.innerHTML = "";
-        this.k5.style.visibility = "hidden";
-        this.is_visible = false;
-        talk.talkRandomly((phrase) => {
-          h2.innerHTML = '"' + phrase + '"';
-        });
-      } else {
-        k5.style.visibility = "visible";
-
-        this.is_visible = true;
-      }
-    }); */
-    const object = { div: this.div, k5: this.k5, is_visible: this.is_visible };
-
-    keyboardListener(object, function (event) {
+    const object = {
+      div: this.div,
+      h2: this.h2,
+      k5: this.k5,
+      is_visible: this.is_visible,
+      talk: this.talk,
+    };
+    const keyboardListener = new KeyboardListener(object);
+    keyboardListener.keydown(function (event) {
       if (event.code === "Enter" && (event.ctrlKey || event.metaKey)) {
         if (object.is_visible) {
           object.div.innerHTML = "";
           object.k5.style.visibility = "hidden";
-          object.is_visible = false;
-          this.talk.talkRandomly((phrase) => {
-            h2.innerHTML = '"' + phrase + '"';
+          object.talk.talkRandomly((phrase) => {
+            object.h2.innerHTML = '"' + phrase + '"';
           });
+          object.is_visible = false;
         } else {
           object.k5.style.visibility = "visible";
-
           object.is_visible = true;
         }
       }
     });
   }
-
-  goNext() {
-    multiKeyListener(this.div, "Enter", "ctrl", function () {
-      if (this.is_visible) {
-        this.div.innerHTML = "";
-        this.k5.style.visibility = "hidden";
-        this.is_visible = false;
-        talk.talkRandomly((phrase) => {
-          h2.innerHTML = '"' + phrase + '"';
-        });
-      } else {
-        k5.style.visibility = "visible";
-
-        this.is_visible = true;
-      }
-    });
-  }
-
-  judgingResult() {}
 }
