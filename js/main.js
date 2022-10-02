@@ -1,8 +1,12 @@
 //読み込み時に実行される関数
 (function () {
-  drawBGImage("/images/background/田舎の家の縁側（日中）.jpg");
-  drawCharaImage("/images/character/patient/josei_11_a.png");
+  drawBGImage("/images/background/engawa_day.jpg");
+  drawCharaImage("/images/character/patient/josei_11_a.webp");
   initRevealTextMessage("女の子「いい縁側ですね 気に入りました」");
+  window.addEventListener("load", function () {
+    const conversation = new StartConversation();
+    conversation.init();
+  });
 })();
 
 //背景の描画

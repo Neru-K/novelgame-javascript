@@ -21,3 +21,8 @@ function multiKeyListener(element, key, mode, callback) {
     }
   });
 }
+function keyboardListener(elements, callback) {
+  document.addEventListener("keydown", function (event) {
+    callback(event);
+  });
+}

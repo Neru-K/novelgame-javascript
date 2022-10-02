@@ -8,110 +8,11 @@
   <link href="/style/reset.css" type="text/css" rel="stylesheet" />
   <link href="/style/novel.css" type="text/css" rel="stylesheet" />
   <link href="/style/text_message.css" type="text/css" rel="stylesheet" />
+  <link href="/style/grammarly.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>ノベルゲーム</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500&display=swap");
-  </style>
-  <style>
-    .k5xt8o2 {
-      visibility: hidden !important;
-    }
-  </style>
-  <style>
-    .grammarly-container {
-      position: relative;
-      width: 800px;
-      height: 350px;
-      margin: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid;
-      resize: both;
-      padding: 8px 12px;
-      background-color: #4e82d5b8;
-      color: #fff;
-    }
-
-    .grammarly-container h2 {
-      margin-bottom: 20px;
-    }
-
-    [contenteditable] {
-      font: inherit;
-      line-height: 1.5;
-      overflow: scroll;
-      height: 230px;
-      z-index: 10;
-      font-family: "Noto Sans Mono", monospace;
-      font-size: 25px;
-      font-weight: 500;
-    }
-
-    [contenteditable]:focus-visible {
-      outline: none;
-    }
-
-    .checkbutton {
-      font-size: 35px;
-      transition: opacity .15s;
-      cursor: pointer;
-      caret-color: transparent;
-    }
-
-    .checkbutton:hover {
-      opacity: .6;
-    }
-
-    .grammarly-bottom {
-      display: flex;
-      flex-wrap: nowrap;
-      position: absolute;
-      bottom: 0;
-      width: calc(100% - 35px);
-    }
-
-    /* progress */
-
-    .progress-container {
-      margin: 0 auto;
-      width: 99%;
-      text-align: center;
-      position: relative;
-      margin: 10px 15px 20px 0;
-    }
-
-    .progress2 {
-      border-radius: 30px;
-      background-color: #fff;
-    }
-
-    .progress-bar2 {
-      height: 18px;
-      border-radius: 30px;
-      transition: 0.4s linear;
-      transition-property: width, background-color;
-    }
-
-    .progress-moved .progress-bar2 {
-      background-color: #f3c623;
-      animation: progress 15s forwards;
-    }
-
-    @keyframes progress {
-      100% {
-        width: 0%;
-        background: #f9bcca;
-      }
-
-      0% {
-        width: 100%;
-        background: #f3c623;
-        box-shadow: 0 0 40px #f3c623;
-      }
-    }
   </style>
 </head>
 
@@ -146,54 +47,12 @@
       <p class="text_message_p"></p>
     </div>
   </div>
-  <script src="/js/conversation.js"></script>
+  <script src="/js/talkRandomly.js"></script>
   <script src="/js/keyboardlistener.js"></script>
   <script src="/js/revealTextMessage.js"></script>
   <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
-  <script>
-    const talk = new TalkRandomly();
-    document
-      .querySelectorAll("grammarly-editor-plugin")
-      .forEach((grammarlyEditor) => {
-        grammarlyEditor.config = {
-          autocomplete: "off",
-          documentDialect: "american",
-          // toneDetector: "on",
-          documentDomain: "casual",
-        };
-      });
+  <script src="js/startConversations.js">
 
-    window.addEventListener("load", function() {
-      const created = document.querySelector("grammarly-editor-plugin");
-      const shadowroot = created.shadowRoot;
-      const k5 = shadowroot.querySelector(".k5xt8o2");
-      let is_visible = false;
-
-      k5.style.visibility = "hidden";
-
-      const checkbutton = document.querySelector('.checkbutton');
-      checkbutton.addEventListener('click', function(v) {
-        k5.style.visibility = "visible";
-      });
-
-      const div = document.querySelector(".input-window");
-      const h2 = document.querySelector(".conv-title");
-      let index = 0;
-      multiKeyListener(div, "Enter", "ctrl", function() {
-        if (is_visible) {
-          div.innerHTML = "";
-          k5.style.visibility = "hidden";
-          is_visible = false;
-          talk.talkRandomly((phrase) => {
-            h2.innerHTML = '"' + phrase + '"';
-          });
-        } else {
-          k5.style.visibility = "visible";
-          is_visible = true;
-        }
-
-      })
-    });
   </script>
 
   <script src="/js/main.js"></script>
