@@ -5,7 +5,7 @@ class KeyboardListener {
 
   keydown(callback) {
     const object = this.object;
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener("keydown", (event) => {
       callback(event);
     });
   }
