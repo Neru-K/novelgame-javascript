@@ -25,6 +25,7 @@ class StartConversation {
       k5: this.k5,
       is_visible: this.is_visible,
       talk: this.talk,
+      timeCount: this.timeCount,
     };
     const keyboardListener = new KeyboardListener(object);
     keyboardListener.keydown(function (event) {
@@ -42,5 +43,24 @@ class StartConversation {
         }
       }
     });
+  }
+
+  timeCount() {
+    const start = new Date(); // 開始時間を覚える
+
+    const timer = setInterval(function () {
+      // 開始からの経過時間は？
+      const timePassed = new Date() - start;
+
+      if (timePassed >= 5000) {
+        clearInterval(timer); // 2秒後にアニメーションが終了
+        this.gameOver();
+        return;
+      }
+    }, 100);
+  }
+  gameClear() {}
+  gameOver() {
+    alert("game was over!");
   }
 }
