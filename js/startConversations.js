@@ -7,6 +7,7 @@ class StartConversation {
     this.h2 = document.querySelector(".conv-title");
     this.shadowroot = this.plugin.shadowRoot;
     this.k5 = this.shadowroot.querySelector(".k5xt8o2");
+    this.bar = document.querySelector(".progress-bar2");
     this.is_visible = false;
     this.start;
     this.timer;
@@ -51,15 +52,17 @@ class StartConversation {
   }
 
   timeCount() {
-    this.start = Date.now(); // 開始時間を覚える
+    this.start = 5000;
 
     this.timer = setInterval(this.gameOver.bind(this), 100);
   }
   gameOver() {
-    const timePassed = Date.now() - this.start;
+    this.start -= 100;
+    // this.start = this.start - this.start * 0.09;
+    this.bar.style.width = this.start / 50 + "%";
 
-    if (timePassed >= 5000) {
-      clearInterval(this.timer); // 2秒後にアニメーションが終了
+    if (this.start < 1) {
+      clearInterval(this.timer);
       alert("game was over!");
       return;
     }
