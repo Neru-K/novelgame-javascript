@@ -22,19 +22,11 @@ class StartConversation {
     };
     this.container.classList.add("show");
 
-    const object = {
-      div: this.div,
-      h2: this.h2,
-      k5: this.k5,
-      is_visible: this.is_visible,
-      talk: this.talk,
-      timeCount: this.timeCount,
-    };
-    const keyboardListener = new KeyboardListener(object);
+    const keyboardListener = new KeyboardListener(/* object */);
 
-    keyboardListener.keydown(this.judgeResult.bind(this));
+    keyboardListener.keydown(this.next.bind(this));
   }
-  judgeResult() {
+  next() {
     if (event.code === "Enter" && (event.ctrlKey || event.metaKey)) {
       if (this.is_visible) {
         this.timeCount();
@@ -48,6 +40,7 @@ class StartConversation {
         this.k5.style.visibility = "visible";
         this.is_visible = true;
       }
+      this.reflectingResults();
     }
   }
 
@@ -57,14 +50,27 @@ class StartConversation {
     this.timer = setInterval(this.gameOver.bind(this), 100);
   }
   gameOver() {
+    let is_over = false;
     this.start -= 100;
     // this.start = this.start - this.start * 0.09;
     this.bar.style.width = this.start / 50 + "%";
 
-    if (this.start < 1) {
+    if (this.start < 0) {
       clearInterval(this.timer);
       alert("game was over!");
+      is_over = true;
+    }
+    if (is_over) {
       return;
     }
+  }
+
+  finishConversation() {}
+  reflectingResults() {
+    const button = this.shadowroot.querySelector("button");
+    const status = button.getAttribute("data-grammarly-status");
+    const count = button.getAttribute("data-grammarly-count");
+    console.log(status);
+    console.log(count);
   }
 }
