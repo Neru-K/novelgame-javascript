@@ -48,7 +48,4 @@ class TalkRandomly {
       }
     });
   }
-
-  finishConversation() {}
-  reflectingResults() {}
 }
