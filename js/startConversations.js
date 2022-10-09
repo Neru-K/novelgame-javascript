@@ -51,16 +51,14 @@ class StartConversation {
   }
   gameOver() {
     let is_over = false;
-    this.start -= 100;
+    this.start -= 10;
     // this.start = this.start - this.start * 0.09;
     this.bar.style.width = this.start / 50 + "%";
 
     if (this.start < 0) {
-      clearInterval(this.timer);
       alert("game was over!");
-      is_over = true;
-    }
-    if (is_over) {
+      clearInterval(this.timer);
+
       return;
     }
   }
@@ -68,9 +66,29 @@ class StartConversation {
   finishConversation() {}
   reflectingResults() {
     const button = this.shadowroot.querySelector("button");
-    const status = button.getAttribute("data-grammarly-status");
-    const count = button.getAttribute("data-grammarly-count");
-    console.log(status);
+    let isStatusOk = false;
+    let status = "loading";
+    const count = parseInt(button.getAttribute("data-grammarly-count"));
+
     console.log(count);
+    const statusTimer = setInterval(function () {
+      if (status === "ok") {
+        updateStatus();
+      }
+      status = button.getAttribute("data-grammarly-status");
+    }, 100);
+
+    function updateStatus() {
+      clearInterval(statusTimer);
+      if (count === 0) {
+        alert("Exellent");
+      } else if (count < 3) {
+        alert("good");
+      } else {
+        alert("bad");
+      }
+
+      return true;
+    }
   }
 }
