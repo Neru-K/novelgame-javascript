@@ -58,7 +58,7 @@ class StartConversation {
     if (this.start < 0) {
       alert("game was over!");
       clearInterval(this.timer);
-
+      this.start = 5000;
       return;
     }
   }
