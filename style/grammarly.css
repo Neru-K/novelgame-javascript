@@ -60,11 +60,10 @@
 /* progress */
 
 .progress-container {
-    margin: 0 auto;
-    width: 99%;
+    width: 100%;
     text-align: center;
     position: relative;
-    margin: 10px 15px 20px 0;
+    margin: 10px 0 20px;
 }
 
 .progress2 {
