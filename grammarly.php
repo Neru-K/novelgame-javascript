@@ -48,7 +48,7 @@
     <grammarly-editor-plugin>
       <div class="grammarly-container">
         <h2 class="conv-title"></h2>
-        <div class="input-window" contenteditable="true" onpaste="return false;" oncontextmenu="return false;">
+        <div class="input-window customScrollbar" contenteditable="true" onpaste="return false;" oncontextmenu="return false;">
           <p>
           </p>
         </div>
