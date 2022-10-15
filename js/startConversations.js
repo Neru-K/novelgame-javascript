@@ -45,7 +45,13 @@ class StartConversation {
       } else {
         this.k5.style.visibility = "visible";
         this.is_visible = true;
+        clearInterval(this.timer);
+        this.timer = 0;
         this.countScores();
+      }
+    } else if (parseInt(event.which) > 47 && parseInt(event.which) < 91) {
+      if (!this.is_visible) {
+        this.start += 20;
       }
     }
   }
@@ -79,7 +85,7 @@ class StartConversation {
     }
   }
 
-  finishConversation() {}
+  finishConversation() { }
   countScores() {
     this.button = this.shadowroot.querySelector("button");
     //ローディングをつける
