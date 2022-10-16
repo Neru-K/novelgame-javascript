@@ -2,6 +2,8 @@ class TalkRandomly {
   constructor() {
     this.phrases = [];
     this.level = 0;
+    this.cp_phrases = [];
+    this.user_phrases = [];
   }
   #getDividedPhrases(callback) {
     fetch("/assets/conv/topics.json")
@@ -9,7 +11,7 @@ class TalkRandomly {
         return response.json();
       })
       .then((jsondata) => {
-        return jsondata.phrase[0];
+        return jsondata.phrase[1];
       })
       .then((phrases) => {
         const num = Math.ceil(phrases.length / 10);
@@ -36,15 +38,16 @@ class TalkRandomly {
 
   talkRandomly(callback) {
     this.#getDividedPhrases((phrases) => {
-      const part_of_phrases = phrases[this.level];
-      const phrase =
-        part_of_phrases[Math.floor(Math.random() * part_of_phrases.length)];
-      callback(phrase);
-
-      if (this.level < 10) {
+      if (this.level < phrases.length) {
+        const part_of_phrases = phrases[this.level];
+        const phrase =
+          part_of_phrases[Math.floor(Math.random() * part_of_phrases.length)];
+        callback(phrase);
         this.level++;
       } else {
-        finishConversation();
+        this.showResult = new ShowResult(this.cp_phrases, this.user_phrases);
+        this.showResult.showResult();
+        this.showResult.init();
       }
     });
   }

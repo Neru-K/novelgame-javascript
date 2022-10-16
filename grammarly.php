@@ -70,6 +70,7 @@
       <p class="text_message_p"></p>
     </div>
   </div>
+  <script src="/js/showResult.js"></script>
   <script src="/js/talkRandomly.js"></script>
   <script src="/js/keyboardlistener.js"></script>
   <script src="/js/revealTextMessage.js"></script>

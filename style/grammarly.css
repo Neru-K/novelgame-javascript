@@ -111,3 +111,29 @@
     background-color: #74b9ff;
     border-radius: 10px;
 }
+
+.filter {
+    filter: blur(5px) grayscale(0.4);
+}
+
+/* result画面 */
+.result-container {
+    position: relative;
+    width: 800px;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    resize: both;
+    padding: 8px 12px;
+    background-color: #4e82d5b8;
+    color: #fff;
+    display: none;
+}
+
+.result-container.show {
+    display: block;
+}

@@ -18,6 +18,8 @@ class StartConversation {
     this.start;
     this.timer = 0;
     this.statusTimer = 0;
+
+    this.input_window = document.querySelector(".input-window");
   }
 
   init() {
@@ -40,6 +42,7 @@ class StartConversation {
         this.k5.style.visibility = "hidden";
         this.talk.talkRandomly((phrase) => {
           this.h2.innerHTML = '"' + phrase + '"';
+          this.talk.cp_phrases.push('"' + phrase + '"');
         });
         this.is_visible = false;
       } else {
@@ -48,6 +51,8 @@ class StartConversation {
         clearInterval(this.timer);
         this.timer = 0;
         this.countScores();
+        const phrase = this.input_window.textContent;
+        this.talk.user_phrases.push('"' + phrase + '"');
       }
     } else if (parseInt(event.which) > 47 && parseInt(event.which) < 91) {
       if (!this.is_visible) {
@@ -70,22 +75,24 @@ class StartConversation {
     this.start = 5000;
     //誤動作で無限ループしないように（キー連打でsetTimerの際に複数の値が入る可能性）
     if (this.timer === 0) {
-      this.timer = setInterval(this.gameOver.bind(this), 100);
+      this.timer = setInterval(this.timeOver.bind(this), 100);
     }
   }
-  gameOver() {
+  timeOver() {
     let is_over = false;
     this.start -= 10;
     this.bar.style.width = this.start / 50 + "%";
 
     if (this.start < 0) {
-      alert("game was over!");
+      alert("timeover!");
       clearInterval(this.timer);
       this.timer = 0;
     }
   }
 
-  finishConversation() { }
+  end() {
+    this.container.classList.remove("show");
+  }
   countScores() {
     this.button = this.shadowroot.querySelector("button");
     //ローディングをつける
