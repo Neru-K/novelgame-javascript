@@ -41,10 +41,7 @@
         </div>
       </div>
       <div class="right"></div>
-      <!-- <img src="/images/character/patient/josei_11_a.webp" alt="キャラクター"> -->
     </div>
-    <!-- <div class="grammarly-container"> -->
-
     <grammarly-editor-plugin>
       <div class="grammarly-container">
         <h2 class="conv-title"></h2>
@@ -58,13 +55,9 @@
               <div class="progress-bar2"></div>
             </div>
           </div>
-          <!-- <span class="checkbutton material-symbols-outlined">
-            check_circle
-          </span> -->
         </div>
       </div>
     </grammarly-editor-plugin>
-    <!-- </div> -->
 
     <div class="message_box">
       <p class="text_message_p"></p>
