@@ -9,7 +9,6 @@
   <link href="/style/novel.css" type="text/css" rel="stylesheet" />
   <link href="/style/text_message.css" type="text/css" rel="stylesheet" />
   <link href="/style/grammarly.css" type="text/css" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>ノベルゲーム</title>
   <style>
@@ -20,7 +19,6 @@
 <body>
   <div id="game-container">
     <div id="background-layer" class="engawa_day">
-      <!-- <img src="/images/background/engawa_day.jpg" alt="背景画像"> -->
     </div>
     <div id="character-layer">
       <div class="left"></div>
