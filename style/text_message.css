@@ -1,4 +1,4 @@
-.message_box {
+#message_box {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -10,22 +10,9 @@
     width: 80%;
     margin: 50px auto;
     z-index: 1;
-}
-
-.message_box {
     box-shadow: rgba(204, 219, 232, .5) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.25) -3px -3px 6px 1px inset;
-}
-
-.text_message_p {
     color: #fff;
     font-size: 35px;
-    margin: 0;
-}
-
-.text_message_p>span {
-    opacity: 0;
-}
-
-.text_message_p>span.revealed {
-    opacity: 1;
+    font-family: "Noto Sans Mono", monospace;
+    font-weight: 500;
 }

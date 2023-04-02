@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>ノベルゲーム</title>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600&display=swap");
   </style>
 </head>
 
@@ -57,18 +57,18 @@
       </div>
     </grammarly-editor-plugin>
 
-    <div class="message_box">
-      <p class="text_message_p"></p>
-    </div>
+    <textarea id="message_box">
+
+    </textarea>
   </div>
   <script src="/js/showResult.js"></script>
   <script src="/js/talkRandomly.js"></script>
   <script src="/js/keyboardlistener.js"></script>
   <script src="/js/revealTextMessage.js"></script>
-  <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
+  <!-- <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_8R9ajQZq6iuwo3D3Qdpk7T"></script>
   <script src="js/startConversations.js">
 
-  </script>
+  </script> -->
 
   <script src="/js/main.js"></script>
 </body>

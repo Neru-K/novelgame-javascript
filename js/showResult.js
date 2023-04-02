@@ -14,8 +14,10 @@ class ShowResult {
     this.character.classList.add("filter");
   }
   createElement(cp_phrase, user_phrase) {
-    this.h2.innerHTML = cp_phrase;
-    this.div.innerHTML = user_phrase;
+    const element = document.createElement("grammarly-editor-plugin");
+/*     this.h2.innerHTML = cp_phrase;
+    this.div.innerHTML = user_phrase; */
+    element.innerHTML
   }
   init() {
     this.createElement(this.cp_phrases[0], this.user_phrases[1]);

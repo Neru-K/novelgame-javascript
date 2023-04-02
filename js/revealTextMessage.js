@@ -1,30 +1,35 @@
-function initRevealTextMessage(text) {
-  let chars = [];
-  const text_message_p = document.getElementsByClassName("text_message_p")[0];
-  text.split("").forEach((char) => {
-    let span = document.createElement("span");
-    span.textContent = char;
-    text_message_p.appendChild(span);
+// function displayText(textArea, text) {
+//   let index = 0;
 
-    chars.push({
-      span,
-      delayAfter: char === " " ? 0 : 60,
-    });
-  });
+//   function type() {
+//     textArea.value += text[index];
+//     index++;
 
-  revealTextMessage(chars);
-}
+//     if (index >= text.length) {
+//       clearInterval(intervalId);
+//     }
+//   }
 
-function revealTextMessage(list) {
-  let timeout;
-  const next = list.splice(0, 1)[0];
-  next.span.classList.add("revealed");
+//   const intervalId = setInterval(type, 100);
+// }
 
-  if (list.length > 0) {
-    timeout = setTimeout(() => {
-      revealTextMessage(list);
-    }, next.delayAfter);
-  } else {
-    clearTimeout(timeout);
+// displayText(textArea, text);
+
+class TextMessage {
+  constructor() {
+    this.textArea = document.getElementById("message_box");
+    this.textArea.value = "";
+    this.text = "ノベルゲームのようなイメージです。";
+  }
+
+  displayText() {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      this.textArea.value += this.text[index];
+      index++;
+      if (index >= this.text.length) {
+        clearInterval(intervalId);
+      }
+    }, 100);
   }
 }

@@ -1,0 +1,61 @@
+1.バックエンドはFirebase firestore,及びcloud functionで実装。
+    a.Firebase Authenticationを使ったユーザー登録・ログイン機能
+    b.ゲームのデータを保存するデータベース
+        ゲーム全体のデータ
+        ・英単語データ
+        ・英会話フレーズデータ
+        ・ゲームのストーリーデータ
+        
+        ユーザー個別の情報
+        ・ユーザーアカウント情報データ
+        ・学習状況と成績データ
+        ・お気に入り登録した単語データ
+        ・ストーリーの進行状況データ
+
+    c.Cloud Functionsのプログラム
+        ・データベースからの読み書き
+        ・ChatGPT apiとの通信
+        ・ゲームの成績を判定する処理
+
+2．フロントエンドはTypeScriptで実装。英会話が学習できるノベルゲーム。
+    a.ノベルゲームのストーリーパート
+    b.英会話ミニゲーム集
+    c.コンフィグ画面
+    d.成績優秀者を表示するランキング画面
+    e.ユーザーごとに単語やフレーズを登録できる画面
+    f.成績をグラフなどで表示する画面
+
+
+
+your-project/
+├── functions/
+│   ├── src/
+│   │   ├── authentication/
+│   │   ├── database/
+│   │   ├── gpt/
+│   │   ├── index.ts
+│   │   └── package.json
+│   ├── .eslintrc.json
+│   ├── .firebaserc
+│   ├── firebase.json
+│   └── tsconfig.json
+│
+└── client/
+    ├── public/
+    ├── src/
+    │   ├── assets/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── services/
+    │   ├── styles/
+    │   ├── types/
+    │   ├── utils/
+    │   ├── App.tsx
+    │   ├── index.tsx
+    │   └── react-app-env.d.ts
+    ├── .eslintrc.json
+    ├── .prettierrc.json
+    ├── .env.local
+    ├── package.json
+    ├── tsconfig.json
+    └── yarn.lock
